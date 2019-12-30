@@ -28,7 +28,7 @@ describe('arabic to roman numerals converter function', () => {
       describe(title, () => {
         it('should throw correct error message', () => {
           // @ts-ignore
-          expect(arabicToRoman(input)).to.throw(invalidInputErrorMessage);
+          expect(() => arabicToRoman(input)).to.throw(invalidInputErrorMessage);
         });
       });
     });

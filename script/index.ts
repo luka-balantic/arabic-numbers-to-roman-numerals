@@ -8,4 +8,10 @@ const arabicToRomanNumeralMapping: { [key: number]: string } = {
   1000: 'M',
 };
 
-export default (number: number): string => String(arabicToRomanNumeralMapping[number]);
+export default (number: number): string => {
+  if (!Number.isInteger(number) || number < 1 || number > 3999) {
+    throw new Error('Invalid input! Please only use integers bigger or equal than 1 and lower or equal than 3999');
+  }
+
+  return String(arabicToRomanNumeralMapping[number]);
+};
