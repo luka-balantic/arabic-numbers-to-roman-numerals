@@ -1,5 +1,6 @@
 # Arabic to Roman numerals converter
-A script that converts Arabic to Roman numerals
+A script that converts Arabic to Roman numerals. Script uses standard substractive format, so make sure you only pass
+integers between 1 and 3999. See [Wikipedia page](https://en.wikipedia.org/wiki/Roman_numerals) for more information.
 
 ### Initialise project
 Run `npm install`
@@ -36,4 +37,3 @@ which means "One less than five", "One less than ten", "Ten less than one hundre
 4. If the next numeral shouldn't be written in "subtractive" notation, it just maps the number (for example `1000`) and adds correct Roman numeral to the string
  and after that deducts the current numeral (for example `1000`) from the left over amount, which can then be correctly used in the next iteration.
 5. If none of these two cases are matched, the script continues to the next Roman numeral mapping (for example, from 1000 to 500 and then to 100 etc..)
-    
